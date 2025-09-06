@@ -1,0 +1,37 @@
+/Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test/module/sub/a_create_timestamps.py:392: DeprecationWarning: Call to deprecated method setMode. (Old API will be removed in v3.0.) -- Deprecated since version 2.1.
+  kakasi.setMode("J", "H")  # 漢字→ひらがな
+/Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test/module/sub/a_create_timestamps.py:393: DeprecationWarning: Call to deprecated method setMode. (Old API will be removed in v3.0.) -- Deprecated since version 2.1.
+  kakasi.setMode("K", "H")  # カタカナ→ひらがな
+/Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test/module/sub/a_create_timestamps.py:394: DeprecationWarning: Call to deprecated method setMode. (Old API will be removed in v3.0.) -- Deprecated since version 2.1.
+  kakasi.setMode("H", "H")  # ひらがなはそのまま
+/Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test/module/sub/a_create_timestamps.py:395: DeprecationWarning: Call to deprecated method getConverter. (Old API will be removed in v3.0.) -- Deprecated since version 2.1.
+  conv = kakasi.getConverter()
+/Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test/module/sub/a_create_timestamps.py:398: DeprecationWarning: Call to deprecated method do. (Old API will be removed in v3.0.) -- Deprecated since version 2.1.
+  lyrics_text = conv.do(raw_text)
+=== 音声ファイルと歌詞からタイムスタンプ作成 ===
+入力WAV: dataset/チューリップ/raw/001_1 VOCALOID  tyu-rti.wav
+元テキスト: さいた さいた チューリップのはなが
+さいたよ ああ
+ひらがな変換後: さいた さいた ちゅーりっぷのはなが
+さいたよ ああ
+入力テキスト: さいた さいた ちゅーりっぷのはなが
+さいたよ ああ
+変換後トークン: sa i ta sa i ta chu u ri cl pu no ha na ga sa i ta yo a a
+辞書登録済みキー数: 156
+生成トークン数: 21
+未知トークン: []
+✅ 全トークンが辞書に登録されています
+SOFA実行中: /Users/neromehiro/opt/anaconda3/bin/python SOFA/infer.py --ckpt /Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test/SOFA/ckpt/SOFA_model_JPN_Ver0.0.2_Beta/japanese-v2.0-45000.ckpt --folder /var/folders/xh/1j09jvjs4rq_q51mfzm1940c0000gn/T/tmpx8aw4xro --g2p Dictionary --dictionary /Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test/SOFA/ckpt/SOFA_model_JPN_Ver0.0.2_Beta/japanese-dictionary.txt --out_formats textgrid,trans --mode force
+現在のディレクトリ: /Users/neromehiro/hiro folder/my_Works/programing/ROSVOT-test
+SOFA実行完了!
+TextGridファイルを発見: /var/folders/xh/1j09jvjs4rq_q51mfzm1940c0000gn/T/tmpx8aw4xro/TextGrid/001_1 VOCALOID  tyu-rti.TextGrid
+タイムスタンプ作成完了:
+  単語数: 26
+  音素数: 40
+  有効な単語持続時間数: 20
+
+✅ タイムスタンプ作成成功!
+📁 TextGrid成果物を保存: output/001_1_VOCALOID__tyu-rti/a_textgrid.TextGrid
+📁 JSON成果物を保存: output/001_1_VOCALOID__tyu-rti/a_timestamps.json
+📊 単語持続時間（最初の10個）: [0.6123253637809061, 0.42668049586332835, 0.5804681159471441, 0.6095371248824808, 0.4265842671513287, 0.5834896054992313, 0.21766231342508213, 0.4209562925686914, 0.41794877842710676, 0.5776127797513855]
+🔗 次のステップ: python module/sub/b_convert_to_rosvot.py
